@@ -7,8 +7,8 @@ def load_data(path):
     y = []
 
     categories = {
-        "NORMAL": 1,
-        "PNEUMONIA": -1
+        "NORMAL": -1,
+        "PNEUMONIA": 1
     }
 
     for category, label in categories.items():
@@ -17,7 +17,7 @@ def load_data(path):
         for image_name in os.listdir(os.path.join(folder_path)):
             if image_name.lower().endswith((".jpeg", ".jpg")):
                 image_path = os.path.join(folder_path, image_name)
-                img = cv2.imread(image_path)
+                img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)
                 if img is None:
                     continue
 
