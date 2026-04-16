@@ -2,7 +2,7 @@ import numpy as np
 from tqdm import tqdm
 
 class SoftSVM:
-    def __init__(self, lr = 0.001, C=1.0, epochs=100):
+    def __init__(self, lr = 0.001, C=1.0, epochs=1000):
         self.w = None
         self.b = None
         self.lr = lr
