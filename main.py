@@ -22,6 +22,9 @@ print("Kết quả của SoftSVM")
 print(f"Precision : {precision:.4f}")
 print(f"Recall    : {recall:.4f}")
 print(f"F1-score  : {f1:.4f}")
+# Precision : 0.7220
+# Recall    : 0.9923
+# F1-score  : 0.8359
 
 
 svm = LinearSVC(C=1.0, loss='hinge', max_iter=1000)
@@ -36,6 +39,9 @@ print("Kết quả của LinearSVC của thư viện sklearn")
 print(f"Precision : {precision:.4f}")
 print(f"Recall    : {recall:.4f}")
 print(f"F1-score  : {f1:.4f}")
+# Precision : 0.7135
+# Recall    : 0.9897
+# F1-score  : 0.8292
 
 # Đánh giá:
 # - Precison của SoftSVM cao hơn nhiều so với của LinearSVC -> ít báo nhầm nhưng bỏ sót nhiều trường hợp bị pneumonia
