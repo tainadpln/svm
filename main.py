@@ -10,7 +10,7 @@ X_test, y_test = load_data('chest_xray\\test')
 print(f"X train shape: {np.array(X_train).shape}, y train shape: {np.array(y_train).shape}")
 print(f"X test shape: {np.array(X_test).shape}, y test shape: {np.array(y_test).shape}")
 
-ssvm = SoftSVM(epochs=200)
+ssvm = SoftSVM()
 ssvm.fit(X_train, y_train)
 y_preds_1 = ssvm.predict(X_test)
 
